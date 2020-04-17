@@ -16,12 +16,3 @@ def dfs(NN, initialNode, goalNode, path):
             return True, newPath
         
     return False, None
-
-
-
-    
-    
-    if initialNode in reachersIndexes:
-        return initialNode
-    else:
-        print('no')
