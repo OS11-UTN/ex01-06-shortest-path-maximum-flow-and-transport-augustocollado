@@ -13,9 +13,10 @@ class TestStringMethods(unittest.TestCase):
             [0, 0, 0, 0, 0, 1],
             [0, 0, 0, 0, 0, 0],
         ])
-        pathExists, path = dfs(testSubject, 0, 5)
-        print(pathExists)
+        result, path = dfs(testSubject, 0, 5, np.empty(0))
+        print(result)
         print(path)
+        
         self.assertTrue(1 == 1)
 
 if __name__ == '__main__':
