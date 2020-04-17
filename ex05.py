@@ -11,9 +11,9 @@ def dfs(NN, initialNode, goalNode, path):
     goalReachers = NN[:,goalNode]
     reachersIndexes = np.argwhere(goalReachers)
     for newGoal in reachersIndexes:
-        result, path = dfs(NN, initialNode, newGoal.item(0), np.append(path, newGoal) )
+        result, newPath = dfs(NN, initialNode, newGoal.item(0), np.append(path, newGoal) )
         if result:
-            return True, path
+            return True, newPath
         
     return False, None
 
